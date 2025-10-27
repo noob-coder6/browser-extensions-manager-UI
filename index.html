@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__title">Extensions List</h1>
+      <div class="theme-switcher">
+        <label for="theme-toggle" class="sr-only">Toggle theme</label>
+        <input type="checkbox" id="theme-toggle" class="theme-switcher__toggle">
+        <span class="theme-switcher__slider"></span>
+      </div>
+    </header>
+
+    <main>
+      <div class="filters">
+        <button class="filters__btn filters__btn--active" data-filter-btn data-filter="all">All</button>
+        <button class="filters__btn" data-filter-btn data-filter="active">Active</button>
+        <button class="filters__btn" data-filter-btn data-filter="inactive">Inactive</button>
+      </div>
+
+      <div class="extensions-list">
+        <!-- Extensions will be dynamically inserted here -->
+      </div>
+    </main>
+  </div>
+
+  <template id="extension-card-template">
+  <div class="card">
+    <img src="" alt="" class="card__logo">
+    <div class="card__body">
+      <h2 class="card__name"></h2>
+      <p class="card__description"></p>
+    </div>
+    <div class="card__actions">
+      <button class="card__remove-btn action-btn">Remove</button>
+      <label class="status-toggle">
+        <span class="sr-only"></span>
+        <input type="checkbox" class="status-toggle__checkbox">
+        <span class="status-toggle__slider"></span>
+      </label>
+    </div>
+  </div>
+</template>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/noob-coder6">noob-coder6</a>.
+  </div>
+</body>
+</html>
