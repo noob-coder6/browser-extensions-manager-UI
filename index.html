@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,22 +37,24 @@
   </div>
 
   <template id="extension-card-template">
-  <div class="card">
-    <img src="" alt="" class="card__logo">
-    <div class="card__body">
-      <h2 class="card__name"></h2>
-      <p class="card__description"></p>
+    <div class="card">
+      <div class="card__header">
+        <img src="" alt="" class="card__logo">
+        <div class="card__body">
+          <h2 class="card__name"></h2>
+          <p class="card__description"></p>
+        </div>
+      </div>
+      <div class="card__actions">
+        <button class="card__remove-btn action-btn">Remove</button>
+        <div class="status-toggle">
+          <label class="sr-only"></label>
+          <input type="checkbox" class="status-toggle__checkbox">
+          <span class="status-toggle__slider"></span>
+        </div>
+      </div>
     </div>
-    <div class="card__actions">
-      <button class="card__remove-btn action-btn">Remove</button>
-      <label class="status-toggle">
-        <span class="sr-only"></span>
-        <input type="checkbox" class="status-toggle__checkbox">
-        <span class="status-toggle__slider"></span>
-      </label>
-    </div>
-  </div>
-</template>
+  </template>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
